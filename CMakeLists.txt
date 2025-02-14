@@ -82,6 +82,24 @@ if (BUILD_ANARI_VISIONARAY)
   set(ANARI_VISIONARAY_WITH_HIP OFF)
 endif()
 
+option(BUILD_OSPRAY "Build ospray for anari-ospray device or use one in existing environment?" ON)
+if (BUILD_OSPRAY)
+  set(OSPRAY_HASH "85af2929937d516997451cbd52d352cf93125ed2")
+  if (APPLE)
+    # no arm64 packages for Mac - build these from sourde:
+    set(OSPRAY_BUILD_TBB_FROM_SOURCE ON)
+    set(OSPRAY_BUILD_OPENVKL_FROM_SOURCE ON)
+  else()
+    set(OSPRAY_BUILD_TBB_FROM_SOURCE OFF)
+    set(OSPRAY_BUILD_OPENVKL_FROM_SOURCE OFF)
+  endif()
+endif()
+
+option(BUILD_ANARI_OSPRAY "Build anari-ospray as a part of the superbuild." ON)
+if (BUILD_ANARI_OSPRAY)
+  set(ANARI_OSPRAY_HASH "0c83c53c55e41483b018dfbaf2270c82304949da") # TODO: this is on *my* fork!
+endif()
+
 
 ## Setup top-level variables ##
 
@@ -108,4 +126,12 @@ endif()
 
 if (BUILD_ANARI_VISIONARAY)
   include(dep_anari_visionaray)
+endif()
+
+if (BUILD_OSPRAY)
+  include(dep_ospray)
+endif()
+
+if (BUILD_ANARI_OSPRAY)
+  include(dep_anari_ospray)
 endif()
