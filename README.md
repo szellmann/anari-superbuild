@@ -18,6 +18,7 @@ Devices:
 - `BUILD_ANARI_VISIONARAY`: "Build anari-visionaray as a part of the superbuild"
 
 Apps:
+- `BUILD_PYNARI` "Build pynari python bindings"
 
 Dependencies:
 - `BUILD_OSPRAY` "Build ospray for anari-ospray device or use one in existing environment?" (uses OSPRay's superbuild)

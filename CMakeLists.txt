@@ -100,6 +100,11 @@ if (BUILD_ANARI_OSPRAY)
   set(ANARI_OSPRAY_HASH "0c83c53c55e41483b018dfbaf2270c82304949da") # TODO: this is on *my* fork!
 endif()
 
+option(BUILD_PYNARI "Build pynari python bindings." ON)
+if (BUILD_PYNARI)
+  set(PYNARI_HASH "c0801d030ac4bfe8dea37df5a41e01a945821099") # devel
+endif()
+
 
 ## Setup top-level variables ##
 
@@ -134,4 +139,8 @@ endif()
 
 if (BUILD_ANARI_OSPRAY)
   include(dep_anari_ospray)
+endif()
+
+if (BUILD_PYNARI)
+  include(dep_pynari)
 endif()
