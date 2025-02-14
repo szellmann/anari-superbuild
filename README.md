@@ -4,7 +4,7 @@ ANARI superbuild
 Work in progress -- build the SDK plus devices and other tools and install to
 `${CMAKE_INSTALL_PREFIX}`
 
-## CMake options (basic):
+### CMake options:
 
 ANARI SDK:
 - `BUILD_ANARI_SDK`: "Build ANARK-SDK or use one in existing environment?"
