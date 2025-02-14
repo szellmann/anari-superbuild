@@ -14,11 +14,11 @@ ANARI SDK:
 - `BUILD_ANARI_VIEWER` "Build example viewer along with SDK" (default: off)
 
 Devices:
-- `BUILD_ANARI_VISIONARAY`: "Build anari-visionaray as a part of the superbuild"
 - `BUILD_ANARI_OSPRAY` "Build anari-ospray as a part of the superbuild"
+- `BUILD_ANARI_VISIONARAY`: "Build anari-visionaray as a part of the superbuild"
 
 Apps:
 
 Dependencies:
-- `BUILD_VISIONARAY` "Build visionaray for anari-visionaray device or use one in existing environment?"
 - `BUILD_OSPRAY` "Build ospray for anari-ospray device or use one in existing environment?" (uses OSPRay's superbuild)
+- `BUILD_VISIONARAY` "Build visionaray for anari-visionaray device or use one in existing environment?"
