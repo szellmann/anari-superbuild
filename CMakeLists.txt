@@ -77,7 +77,7 @@ endif()
 
 option(BUILD_VISIONARAY "Build visionaray for anari-visionaray device or use one in existing environment?" ON)
 if (BUILD_VISIONARAY)
-  set(VISIONARAY_HASH "f7df63820cf99c3721c6036708423c2ef8d35f53")
+  set(VISIONARAY_HASH "2eaab90ac6856f88c4849039fc3e1d58e2433acb")
   set(VISIONARAY_WITH_CUDA OFF)
 endif()
 
