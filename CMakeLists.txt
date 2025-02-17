@@ -83,7 +83,7 @@ endif()
 
 option(BUILD_ANARI_VISIONARAY "Build anari-visionaray as a part of the superbuild." ON)
 if (BUILD_ANARI_VISIONARAY)
-  set(ANARI_VISIONARAY_HASH "b13bd7c9afbbef87873514b1a62c00bdbc5f5c72")
+  set(ANARI_VISIONARAY_HASH "c5145d42250424b3203bf9183bdb241ca491d71c")
   set(ANARI_VISIONARAY_WITH_CUDA OFF)
   set(ANARI_VISIONARAY_WITH_HIP OFF)
 endif()
