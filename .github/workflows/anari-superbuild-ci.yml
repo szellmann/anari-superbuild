@@ -17,7 +17,7 @@ jobs:
         os: [ubuntu-24.04, macos-15]
         config: [Release, Debug]
 
-    name: OS ${{ matrix.os }} - config ${{ matrix.config }} - CUDA ${{ matrix.cuda }}
+    name: OS ${{ matrix.os }} - config ${{ matrix.config }}
 
     steps:
     - uses: actions/checkout@v3
