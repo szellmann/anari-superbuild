@@ -22,6 +22,14 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Install apt packages
+      if: matrix.os == 'ubuntu-24.04'
+      run: sudo apt install -y libboost-all-dev libx11-dev
+
+    - name: Install homebrew packages
+      if: matrix.os == 'macos-15'
+      run: brew install boost libx11
+
     - name: Configure
       run: >
         cmake -LA -B ${{ github.workspace }}/build
