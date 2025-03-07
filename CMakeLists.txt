@@ -36,7 +36,7 @@ option(ALWAYS_REBUILD "Force every project to always be rebuilt?" OFF)
 
 option(BUILD_ANARI_SDK "Build ANARK-SDK or use one in existing environment?" ON)
 if (BUILD_ANARI_SDK)
-  set(ANARI_SDK_HASH "565f458481230299988c887a323fdd2e599c79e1") # next_release
+  set(ANARI_SDK_HASH "1d5d569aeda0fbb3f31dd6bb5d7a3a8ed4de04d4") # next_release
 endif()
 
 option(BUILD_HELIDE "Build helide device along with SDK" ON)
@@ -83,7 +83,7 @@ endif()
 
 option(BUILD_ANARI_VISIONARAY "Build anari-visionaray as a part of the superbuild." ON)
 if (BUILD_ANARI_VISIONARAY)
-  set(ANARI_VISIONARAY_HASH "c5145d42250424b3203bf9183bdb241ca491d71c")
+  set(ANARI_VISIONARAY_HASH "e07714e07bf115eb5752ec75e7823c0e65c6b23f")
   set(ANARI_VISIONARAY_WITH_CUDA OFF)
   set(ANARI_VISIONARAY_WITH_HIP OFF)
 endif()
@@ -103,7 +103,7 @@ endif()
 
 option(BUILD_ANARI_OSPRAY "Build anari-ospray as a part of the superbuild." ON)
 if (BUILD_ANARI_OSPRAY)
-  set(ANARI_OSPRAY_HASH "0c83c53c55e41483b018dfbaf2270c82304949da") # TODO: this is on *my* fork!
+  set(ANARI_OSPRAY_HASH "cd711779ba8233952d6dbe44ec9060eecbd252b8") # TODO: this is on *my* fork!
 endif()
 
 option(BUILD_PYNARI "Build pynari python bindings." ON)
