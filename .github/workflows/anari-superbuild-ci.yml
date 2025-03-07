@@ -24,7 +24,7 @@ jobs:
 
     - name: Install apt packages
       if: matrix.os == 'ubuntu-24.04'
-      run: sudo apt install -y libboost-all-dev libx11-dev
+      run: sudo apt install -y libboost-all-dev libx11-dev libxrandr-dev
 
     - name: Install homebrew packages
       if: matrix.os == 'macos-15'
