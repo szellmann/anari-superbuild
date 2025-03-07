@@ -3,10 +3,16 @@ set(COMPONENT_NAME pynari)
 set(COMPONENT_PATH ${CMAKE_INSTALL_PREFIX})
 
 if (TRUE)
+  if (BUILD_LATEST)
+    set(HASH ${${COMPONENT_NAME}_HASH_LATEST})
+  else()
+    set(HASH ${${COMPONENT_NAME}_HASH_STABLE})
+  endif()
+
   ExternalProject_Add(${COMPONENT_NAME}
     PREFIX ${COMPONENT_NAME}
     GIT_REPOSITORY https://github.com/ingowald/pynari.git
-    GIT_TAG ${PYNARI_HASH}
+    GIT_TAG ${HASH}
     STAMP_DIR ${COMPONENT_NAME}/stamp
     SOURCE_DIR ${COMPONENT_NAME}/src
     BINARY_DIR ${COMPONENT_NAME}/build

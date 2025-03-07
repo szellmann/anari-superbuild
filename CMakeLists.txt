@@ -34,9 +34,12 @@ endif()
 
 option(ALWAYS_REBUILD "Force every project to always be rebuilt?" OFF)
 
+option(BUILD_LATEST "Build the latest (and next_release) versions of all libraries" OFF)
+
 option(BUILD_ANARI_SDK "Build ANARK-SDK or use one in existing environment?" ON)
 if (BUILD_ANARI_SDK)
-  set(ANARI_SDK_HASH "1d5d569aeda0fbb3f31dd6bb5d7a3a8ed4de04d4") # next_release
+  set(anari_sdk_HASH_STABLE "1d5d569aeda0fbb3f31dd6bb5d7a3a8ed4de04d4")
+  set(anari_sdk_HASH_LATEST "origin/next_release")
 endif()
 
 option(BUILD_HELIDE "Build helide device along with SDK" ON)
@@ -77,20 +80,23 @@ endif()
 
 option(BUILD_VISIONARAY "Build visionaray for anari-visionaray device or use one in existing environment?" ON)
 if (BUILD_VISIONARAY)
-  set(VISIONARAY_HASH "2eaab90ac6856f88c4849039fc3e1d58e2433acb")
+  set(visionaray_HASH_STABLE "2eaab90ac6856f88c4849039fc3e1d58e2433acb")
+  set(visionaray_HASH_LATEST "origin/master")
   set(VISIONARAY_WITH_CUDA OFF)
 endif()
 
 option(BUILD_ANARI_VISIONARAY "Build anari-visionaray as a part of the superbuild." ON)
 if (BUILD_ANARI_VISIONARAY)
-  set(ANARI_VISIONARAY_HASH "e07714e07bf115eb5752ec75e7823c0e65c6b23f")
+  set(anari_visionaray_HASH_STABLE "e07714e07bf115eb5752ec75e7823c0e65c6b23f")
+  set(anari_visionaray_HASH_LATEST "origin/main")
   set(ANARI_VISIONARAY_WITH_CUDA OFF)
   set(ANARI_VISIONARAY_WITH_HIP OFF)
 endif()
 
 option(BUILD_OSPRAY "Build ospray for anari-ospray device or use one in existing environment?" ON)
 if (BUILD_OSPRAY)
-  set(OSPRAY_HASH "85af2929937d516997451cbd52d352cf93125ed2")
+  set(ospray_HASH_STABLE "85af2929937d516997451cbd52d352cf93125ed2")
+  set(ospray_HASH_LATEST "origin/devel")
   if (APPLE)
     # no arm64 packages for Mac - build these from sourde:
     set(OSPRAY_BUILD_TBB_FROM_SOURCE ON)
@@ -103,12 +109,14 @@ endif()
 
 option(BUILD_ANARI_OSPRAY "Build anari-ospray as a part of the superbuild." ON)
 if (BUILD_ANARI_OSPRAY)
-  set(ANARI_OSPRAY_HASH "cd711779ba8233952d6dbe44ec9060eecbd252b8") # TODO: this is on *my* fork!
+  set(anari_ospray_HASH_STABLE "cd711779ba8233952d6dbe44ec9060eecbd252b8") # TODO: this is on *my* fork!
+  set(anari_ospray_HASH_LATEST "origin/helium_object_finalization") # TODO: this is on *my* fork!
 endif()
 
 option(BUILD_PYNARI "Build pynari python bindings." ON)
 if (BUILD_PYNARI)
-  set(PYNARI_HASH "c0801d030ac4bfe8dea37df5a41e01a945821099") # devel
+  set(pynari_HASH_STABLE "c0801d030ac4bfe8dea37df5a41e01a945821099") # on devel
+  set(pynari_HASH_LATEST "origin/devel")
 endif()
 
 

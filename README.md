@@ -6,6 +6,10 @@ Work in progress -- build the SDK plus devices and other tools and install to
 
 ### CMake options:
 
+`BUILD_LATEST`: (default: off) if set, the latest unstable branches will be
+  used. This, e.g., is the behavior for CI nightly builds; otherwise a (known)
+  stable configuration will be used.
+
 ANARI SDK:
 - `BUILD_ANARI_SDK`: "Build ANARK-SDK or use one in existing environment?"
 - `BUILD_HELIDE` "Build helide device along with SDK"
