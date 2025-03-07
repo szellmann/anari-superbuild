@@ -20,7 +20,7 @@ jobs:
     name: OS ${{ matrix.os }} - config ${{ matrix.config }}
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Install apt packages
       if: matrix.os == 'ubuntu-24.04'
