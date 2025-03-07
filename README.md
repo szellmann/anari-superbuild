@@ -4,6 +4,10 @@ ANARI superbuild
 Work in progress -- build the SDK plus devices and other tools and install to
 `${CMAKE_INSTALL_PREFIX}`
 
+### Status:
+
+![Latest Nightly Build (5:30am UTC)](https://github.com/szellmann/anari-superbuild/actions/workflows/anari-superbuild-ci.yml/badge.svg?event=schedule)
+
 ### CMake options:
 
 `BUILD_LATEST`: (default: off) if set, the latest unstable branches will be
