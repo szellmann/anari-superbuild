@@ -28,7 +28,7 @@ jobs:
 
     - name: Install homebrew packages
       if: matrix.os == 'macos-15'
-      run: brew install boost libx11
+      run: brew install boost
 
     - name: Configure
       run: >
