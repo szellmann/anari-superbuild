@@ -80,7 +80,7 @@ endif()
 option(BUILD_VISIONARAY "Build visionaray for anari-visionaray device or use one in existing environment?" ON)
 if (BUILD_VISIONARAY)
   set(visionaray_REPOSITORY "https://github.com/szellmann/visionaray.git")
-  set(visionaray_HASH_STABLE "2eaab90ac6856f88c4849039fc3e1d58e2433acb")
+  set(visionaray_HASH_STABLE "a4cdfe0bfd42c0b68590b4b1a923837d0e24da71")
   set(visionaray_HASH_LATEST "origin/master")
   set(visionaray_CMAKE_ARGS
     -DVSNRAY_ENABLE_CUDA=OFF
