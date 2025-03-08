@@ -16,9 +16,6 @@ jobs:
       matrix:
         os: [ubuntu-24.04, macos-15, windows-2022]
         config: [Release, Debug]
-        exclude:
-          - os: windows-2022
-            config: Debug # TODO: resolve linker issues
 
     name: OS ${{ matrix.os }} - config ${{ matrix.config }}
 
