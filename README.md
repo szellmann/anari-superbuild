@@ -24,6 +24,12 @@ ANARI SDK:
 Devices:
 - `BUILD_ANARI_OSPRAY` "Build anari-ospray as a part of the superbuild"
 - `BUILD_ANARI_VISIONARAY`: "Build anari-visionaray as a part of the superbuild"
+- `BUILD_VISRTX`: "Build VisRTX as a part of the superbuild"
+
+Device-specific options:
+- `VISRTX_BUILD_RTX_DEVICE`: "When building VisRTX, include the visrtx device"
+- `VISRTX_BUILD_GL_DEVICE`: "When building VisRTX, include the visgl device"
+- `VISRTX_BUILD_TSD`: "When building VisRTX, include TSD"
 
 Apps:
 - `BUILD_PYNARI` "Build pynari python bindings"

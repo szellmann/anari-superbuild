@@ -107,6 +107,48 @@ if (BUILD_ANARI_VISIONARAY)
   add_dependency(anari_visionaray)
 endif()
 
+# visrtx
+
+option(BUILD_VISRTX "When building VisRTX, include the visrtx device" ON)
+option(VISRTX_BUILD_RTX_DEVICE "When building VisRTX, include the visrtx device" ON)
+option(VISRTX_BUILD_GL_DEVICE "When building VisRTX, include the visgl device" ON)
+option(VISRTX_BUILD_TSD "When building VisRTX, include TSD" ON)
+if (BUILD_VISRTX)
+  set(visrtx_REPOSITORY "https://github.com/NVIDIA/VisRTX")
+  set(visrtx_HASH_STABLE "ac8d9a449f0f4ba3400b75fadfb22e4f8223c98e")
+  set(visrtx_HASH_LATEST "origin/next_release")
+  if (APPLE)
+    # No OptiX on Mac OSX:
+    if (VISRTX_BUILD_RTX_DEVICE)
+      message("NOT building VisRTX device on macOS")
+      set(VISRTX_BUILD_RTX_DEVICE OFF)
+    endif()
+
+    # VisGL does not work on Mac OSX:
+    if (VISRTX_BUILD_GL_DEVICE)
+      message("NOT building VisGL device on macOS")
+      set(VISRTX_BUILD_GL_DEVICE OFF)
+    endif()
+  endif()
+
+  if (VISRTX_BUILD_RTX_DEVICE)
+    message("NOT building VisRTX for now (for lack of OptiX headers")
+    set(VISRTX_BUILD_RTX_DEVICE OFF)
+  endif()
+
+  set(visrtx_CMAKE_ARGS
+    -DVISRTX_BUILD_RTX_DEVICE=${VISRTX_BUILD_RTX_DEVICE}
+    -DVISRTX_BUILD_GL_DEVICE=${VISRTX_BUILD_GL_DEVICE}
+    -DVISRTX_BUILD_TSD=${VISRTX_BUILD_TSD}
+    -DTSD_USE_ASSIMP=OFF
+    -DTSD_USE_CUDA=OFF
+    -DTSD_USE_HDF5=OFF
+    -DTSD_USE_TBB=OFF
+  )
+  set(visrtx_DEPENDENCIES anari_sdk)
+  add_dependency(visrtx)
+endif()
+
 # ospray
 
 option(BUILD_OSPRAY "Build ospray for anari-ospray device or use one in existing environment?" ON)
