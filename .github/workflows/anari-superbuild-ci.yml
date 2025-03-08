@@ -30,6 +30,10 @@ jobs:
       if: matrix.os == 'macos-15'
       run: brew install boost glfw
 
+    - name: Install vcpkg packages
+      if: matrix.os == 'windows-2022'
+      run: ${{ github.workspace }}/vcpkg/vcpkg install glfw3
+
     - name: Configure
       run: >
         cmake -LA -B ${{ github.workspace }}/build
