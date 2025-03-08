@@ -181,7 +181,7 @@ if (BUILD_ANARI_OSPRAY)
   set(anari_ospray_REPOSITORY "https://github.com/szellmann/anari-ospray.git") # TODO: this is *my* fork!
   set(anari_ospray_HASH_STABLE "cd711779ba8233952d6dbe44ec9060eecbd252b8") # TODO: this is on *my* fork!
   set(anari_ospray_HASH_LATEST "origin/helium_object_finalization") # TODO: this is on *my* fork!
-  set(anari_visionaray_DEPENDENCIES anari_sdk ospray)
+  set(anari_ospray_DEPENDENCIES anari_sdk ospray)
   add_dependency(anari_ospray)
 endif()
 
