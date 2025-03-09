@@ -207,5 +207,6 @@ if (BUILD_PYNARI)
   set(pynari_REPOSITORY "https://github.com/ingowald/pynari.git")
   set(pynari_HASH_STABLE "c0801d030ac4bfe8dea37df5a41e01a945821099") # on devel
   set(pynari_HASH_LATEST "origin/devel")
+  set(pynari_DEPENDENCIES anari_sdk)
   add_dependency(pynari)
 endif()
