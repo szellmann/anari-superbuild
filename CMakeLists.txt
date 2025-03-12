@@ -96,7 +96,7 @@ endif()
 option(BUILD_VISIONARAY "Build visionaray for anari-visionaray device or use one in existing environment?" ON)
 if (BUILD_VISIONARAY)
   set(visionaray_REPOSITORY "https://github.com/szellmann/visionaray.git")
-  set(visionaray_HASH_STABLE "a4cdfe0bfd42c0b68590b4b1a923837d0e24da71")
+  set(visionaray_HASH_STABLE "v0.5.0")
   set(visionaray_HASH_LATEST "origin/master")
   set(visionaray_CMAKE_ARGS
     -DVSNRAY_ENABLE_CUDA=OFF
@@ -112,7 +112,7 @@ endif()
 option(BUILD_ANARI_VISIONARAY "Build anari-visionaray as a part of the superbuild." ON)
 if (BUILD_ANARI_VISIONARAY)
   set(anari_visionaray_REPOSITORY "https://github.com/szellmann/anari-visionaray.git")
-  set(anari_visionaray_HASH_STABLE "e07714e07bf115eb5752ec75e7823c0e65c6b23f")
+  set(anari_visionaray_HASH_STABLE "199046a9512d09c31f8a78607164377613e59ed7")
   set(anari_visionaray_HASH_LATEST "origin/main")
   set(anari_visionaray_CMAKE_ARGS
     -DANARI_VISIONARAY_ENABLE_CUDA=OFF
