@@ -6,7 +6,7 @@ Work in progress -- build the SDK plus devices and other tools and install to
 
 ### Status (Nightly Builds at 5:30am UTC):
 
-![Latest Nightly Build (5:30am UTC)(https://github.com/szellmann/anari-superbuild/actions/workflows/anari-superbuild-ci.yml/badge.svg?event=schedule)](https://github.com/szellmann/anari-superbuild/actions/workflows/anari-superbuild-ci.yml)
+[![CI](https://github.com/szellmann/anari-superbuild/actions/workflows/anari-superbuild-ci.yml/badge.svg?event=schedule)](https://github.com/szellmann/anari-superbuild/actions/workflows/anari-superbuild-ci.yml)
 
 ### CMake options:
 
