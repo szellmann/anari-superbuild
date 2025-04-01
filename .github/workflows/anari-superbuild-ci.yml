@@ -105,11 +105,11 @@ jobs:
     - name: Build VisRTX
       run: cmake --build ${{ github.workspace }}/build --config ${{ matrix.config }} --target visrtx
 
-    - name: Build OSPRay
-      run: cmake --build ${{ github.workspace }}/build --config ${{ matrix.config }} --target ospray
+    #- name: Build OSPRay
+    #  run: cmake --build ${{ github.workspace }}/build --config ${{ matrix.config }} --target ospray
 
-    - name: Build anari-ospray
-      run: cmake --build ${{ github.workspace }}/build --config ${{ matrix.config }} --target anari_ospray
+    #- name: Build anari-ospray
+    #  run: cmake --build ${{ github.workspace }}/build --config ${{ matrix.config }} --target anari_ospray
 
     - name: Build pynari
       run: cmake --build ${{ github.workspace }}/build --config ${{ matrix.config }} --target pynari
