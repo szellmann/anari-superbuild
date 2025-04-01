@@ -93,5 +93,23 @@ jobs:
         -DBUILD_LATEST=${{ github.event_name == 'schedule' }}
         -DWITH_CUDA=${{ matrix.cuda }}
 
-    - name: Build
-      run: cmake --build ${{ github.workspace }}/build --config ${{ matrix.config }}
+    - name: Build ANARI-SDK
+      run: cmake --build ${{ github.workspace }}/build --config ${{ matrix.config }} --target anari_sdk
+
+    - name: Build visionaray
+      run: cmake --build ${{ github.workspace }}/build --config ${{ matrix.config }} --target visionaray
+
+    - name: Build anari-visionaray
+      run: cmake --build ${{ github.workspace }}/build --config ${{ matrix.config }} --target anari_visionaray
+
+    - name: Build VisRTX
+      run: cmake --build ${{ github.workspace }}/build --config ${{ matrix.config }} --target visrtx
+
+    - name: Build OSPRay
+      run: cmake --build ${{ github.workspace }}/build --config ${{ matrix.config }} --target ospray
+
+    - name: Build anari-ospray
+      run: cmake --build ${{ github.workspace }}/build --config ${{ matrix.config }} --target anari_ospray
+
+    - name: Build pynari
+      run: cmake --build ${{ github.workspace }}/build --config ${{ matrix.config }} --target pynari
